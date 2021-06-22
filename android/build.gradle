@@ -57,12 +57,12 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
 
     //added values for dsi
-   implementation "androidx.appcompat:appcompat:1.3.0"
-   implementation "androidx.appcompat:appcompat-resources:1.3.0"
+    implementation "androidx.appcompat:appcompat:1.3.0"
+    implementation "androidx.appcompat:appcompat-resources:1.3.0"
 //    implementation project(path: ':DSIEMVAndroid')
-//    compile(name:'DSIEMVAndroid', ext:'aar')
-//    compile(':DSIEMVAndroid', ext:'aar')
-   compile(name:'DSIEMVAndroid', ext:'aar')
-   implementation files('libs/simple-xml-2.7.1.jar')
-   implementation files('libs/nanohttpd-2.3.1.jar')
+    compile(name:'DSIEMVAndroid', ext:'aar')
+    implementation files('libs/simple-xml-2.7.1.jar')
+    implementation(
+                [group: 'org.nanohttpd', name: 'nanohttpd', version: '2.3.1'],
+    )
 }
