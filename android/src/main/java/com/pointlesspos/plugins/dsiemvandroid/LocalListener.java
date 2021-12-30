@@ -21,7 +21,7 @@ import com.getcapacitor.PluginMethod;
 @CapacitorPlugin()
 //public class LocalListener<NanoHTTPD> extends NanoHTTPD {
 public class LocalListener extends NanoHTTPD {
-    private Context AppContext;
+    private final Context AppContext;
     private static final Logger LOG = Logger.getLogger(LocalListener.class.getName());
 
     @PluginMethod()

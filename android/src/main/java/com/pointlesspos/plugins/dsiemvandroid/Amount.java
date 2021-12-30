@@ -8,7 +8,7 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 
 @CapacitorPlugin()
 public class Amount {
-    private String Purchase;
+    private final String Purchase;
 
     @PluginMethod
     public Amount(String mpurchase){

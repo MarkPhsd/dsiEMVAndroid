@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     private DialogInterface.OnClickListener mDeviceSelection;
     private String mConnectedDevice = "";
     private int mNamePos = 1;
-    private String[] mDeviceList = {"", "", "", "", "", "", "", ""};
+    private final String[] mDeviceList = {"", "", "", "", "", "", "", ""};
     private AlertDialog mBTdialog;
 
     @Override
