@@ -2,13 +2,13 @@ package com.pointlesspos.plugins.dsiemvandroid;
 
 import android.content.Context;
 import com.getcapacitor.JSObject;
-import com.getcapacitor.NativePlugin;
+import com.getcapacitor.annotation.CapacitorPlugin;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.datacap.android.dsiEMVAndroid;
 
-@NativePlugin()
+@CapacitorPlugin()
 public class dsiEMVAndroidinstance {
     private static volatile dsiEMVAndroid instance;
 

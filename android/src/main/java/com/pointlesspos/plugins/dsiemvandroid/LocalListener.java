@@ -2,7 +2,7 @@ package com.pointlesspos.plugins.dsiemvandroid;
 
 import android.content.Context;
 import android.util.Log;
-
+import com.getcapacitor.annotation.CapacitorPlugin;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -13,12 +13,12 @@ import fi.iki.elonen.NanoHTTPD;
 //Local Listener class starts a post endpoint at this devices IP address on port 8080.
 //Using the Datacap Client Test utility an integrator can test different transactions on the VP3300
 import com.getcapacitor.JSObject;
-import com.getcapacitor.NativePlugin;
+import com.getcapacitor.annotation.CapacitorPlugin;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 
-@NativePlugin()
+@CapacitorPlugin()
 //public class LocalListener<NanoHTTPD> extends NanoHTTPD {
 public class LocalListener extends NanoHTTPD {
     private Context AppContext;

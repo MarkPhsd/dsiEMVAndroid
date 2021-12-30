@@ -27,7 +27,7 @@ import com.datacap.android.BluetoothConnectionListener;
 import com.datacap.android.DisplayMessageListener;
 import com.datacap.android.EstablishBluetoothConnectionResponseListener;
 import com.datacap.android.ProcessTransactionResponseListener;
-import com.getcapacitor.NativePlugin;
+import com.getcapacitor.annotation.CapacitorPlugin;
 
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
@@ -52,7 +52,7 @@ import static com.pointlesspos.plugins.dsiemvandroid.R.id.returnButton;
 import static com.pointlesspos.plugins.dsiemvandroid.R.id.saleButton;
 import static com.pointlesspos.plugins.dsiemvandroid.R.id.selectDevice;
 
-@NativePlugin()
+@CapacitorPlugin()
 public class MainActivity extends AppCompatActivity {
 
     private static final int PERMISSION_REQUEST_FINE_LOCATION = 1;
@@ -643,7 +643,7 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
     }
 
-    @PluginMethod()
+
     public static String getIPAddress(boolean useIPv4) {
         try {
             List<NetworkInterface> interfaces = Collections.list(NetworkInterface.getNetworkInterfaces());

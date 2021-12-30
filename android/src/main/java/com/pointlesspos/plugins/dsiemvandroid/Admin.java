@@ -1,12 +1,12 @@
 package com.pointlesspos.plugins.dsiemvandroid;
 
 import com.getcapacitor.JSObject;
-import com.getcapacitor.NativePlugin;
+import com.getcapacitor.annotation.CapacitorPlugin;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 
-@NativePlugin()
+@CapacitorPlugin()
 public class Admin {
     private String MerchantID;
     private String UserTrace;

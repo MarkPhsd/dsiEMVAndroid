@@ -1,12 +1,12 @@
 package com.pointlesspos.plugins.dsiemvandroid;
 
 import com.getcapacitor.JSObject;
-import com.getcapacitor.NativePlugin;
+import com.getcapacitor.annotation.CapacitorPlugin;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 
-@NativePlugin
+@CapacitorPlugin
 public class dsiemvandroid extends Plugin {
     public void load() {
         // Called when the plugin is first constructed in the bridge

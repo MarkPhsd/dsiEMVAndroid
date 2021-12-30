@@ -1,8 +1,8 @@
 package com.pointlesspos.plugins.dsiemvandroid;
-import com.getcapacitor.NativePlugin;
+import com.getcapacitor.annotation.CapacitorPlugin;
 import com.getcapacitor.PluginMethod;
 
-@NativePlugin()
+@CapacitorPlugin()
 public class Transaction {
     private String MerchantID;
     private String UserTrace;
