@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="android/build/generated/source/buildConfig/debug"/>
+	<classpathentry kind="src" path="android/src/androidTest/java"/>
+	<classpathentry kind="src" path="android/src/main/java"/>
+	<classpathentry kind="src" path="android/src/test/java"/>
+	<classpathentry kind="src" path="node_modules/@capacitor/android/capacitor/src/main/java"/>
+	<classpathentry kind="lib" path="android/build/intermediates/aar_libs_directory/debug/libs/simple-xml-2.7.1.jar"/>
+	<classpathentry kind="lib" path="android/build/intermediates/aar_main_jar/debug/classes.jar"/>
+	<classpathentry kind="lib" path="android/build/intermediates/compile_library_classes_jar/debug/classes.jar"/>
+	<classpathentry kind="lib" path="android/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/R.jar"/>
+	<classpathentry kind="lib" path="android/build/intermediates/compile_r_class_jar/debug/R.jar"/>
+	<classpathentry kind="lib" path="android/build/intermediates/merged_java_res/debug/out.jar"/>
+	<classpathentry kind="lib" path="android/build/intermediates/runtime_library_classes_jar/debug/classes.jar"/>
+	<classpathentry kind="lib" path="android/DSIEMVAndroid/build/.transforms/c0e897864c680d412ce4fd2f8c0ba229/jetified-DSIEMVAndroid/jars/classes.jar"/>
+	<classpathentry kind="lib" path="android/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="android/libs/simple-xml-2.7.1.jar"/>
+	<classpathentry kind="output" path="android/build/intermediates/javac/debug/classes"/>
+</classpath>

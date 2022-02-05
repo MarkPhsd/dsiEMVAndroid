@@ -41,6 +41,7 @@ public class Transaction {
         this.RecordNo = recordNo;
         this.RefNo = refNo;
     }
+
     @PluginMethod()
     public Transaction(String merchantID, String userTrace, String pOSPackageID, String tranCode, String secureDevice, String invoiceNo,  Amount amount, String sequenceNo, String operationMode, String recordNo, String refNo){
         this.MerchantID = merchantID;
@@ -72,7 +73,6 @@ public class Transaction {
         this.PinPadIpAddress = pinPadIpAddress;
         this.PinPadIpPort = pinPadIpPort;
     }
-
 
     @PluginMethod()
     public String getMerchantID() {

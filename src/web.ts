@@ -1,25 +1,42 @@
-// import { WebPlugin } from '@capacitor/core';
-// import { dsiemvandroidPlugin } from './definitions';
+import { WebPlugin } from '@capacitor/core';
+import { dsiemvandroidPlugin } from './definitions';
+import { registerWebPlugin } from '@capacitor/core';
 
-// export class dsiemvandroidWeb extends WebPlugin implements dsiemvandroidPlugin {
-//   constructor() {
-//     super({
-//       name: 'dsiemvandroid',
-//       platforms: ['web'],
-//     });
+// import type {
+//   EchoPlugin, OpenMapOptions
+// } from './definitions';
+
+export class dsiemvandroidWeb extends WebPlugin implements dsiemvandroidPlugin {
+  constructor() {
+    super({
+      name: 'dsiemvandroid',
+      platforms: ['web'],
+    });
+  }
+
+  async echo(options: { value: string }): Promise<{ value: string }> {
+    options.value = options.value +  " output is from web implementation"
+    return options;
+  }
+}
+
+const dsiemvandroid = new dsiemvandroidWeb();
+
+export { dsiemvandroid };
+
+registerWebPlugin(dsiemvandroid);
+
+////////////////////////
+// export class EchoWeb extends WebPlugin implements EchoPlugin {
+//   openMap(options: OpenMapOptions): Promise<void> {
+//     console.log(options)
+//     throw new Error('Method not implemented.');
 //   }
-
+//   // other methods
 //   async echo(options: { value: string }): Promise<{ value: string }> {
-//     // console.log('ECHO', 'what are the options');
 //     options.value = options.value +  " output is from web implementation"
-//     console.log('options', options )
 //     return options;
 //   }
+//   // async openMap(location: OpenMapOptions): Promise<void> {
+//     // logic here
 // }
-
-// const dsiemvandroid = new dsiemvandroidWeb();
-
-// export { dsiemvandroid };
-
-// // import { registerWebPlugin } from '@capacitor/core';
-// // registerWebPlugin(dsiemvandroid);

@@ -7,7 +7,6 @@ ext {
 buildscript {
     repositories {
         google()
-        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.1'
@@ -38,7 +37,6 @@ android {
 
 repositories {
     google()
-    jcenter()
     mavenCentral()
 
     //added for dsi

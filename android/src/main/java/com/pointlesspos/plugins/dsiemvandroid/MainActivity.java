@@ -53,7 +53,8 @@ import static com.pointlesspos.plugins.dsiemvandroid.R.id.saleButton;
 import static com.pointlesspos.plugins.dsiemvandroid.R.id.selectDevice;
 
 @CapacitorPlugin()
-public class MainActivity extends AppCompatActivity {
+// public class MainActivity extends AppCompatActivity   {
+public class MainActivity extends AppCompatActivity    {
 
     private static final int PERMISSION_REQUEST_FINE_LOCATION = 1;
     private static final int PERMISSION_REQUEST_BACKGROUND_LOCATION = 2;
@@ -66,6 +67,12 @@ public class MainActivity extends AppCompatActivity {
     private int mNamePos = 1;
     private final String[] mDeviceList = {"", "", "", "", "", "", "", ""};
     private AlertDialog mBTdialog;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        registerPlugin(EchoPlugin.class);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
