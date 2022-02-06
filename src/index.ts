@@ -6,28 +6,24 @@
 
 // https://capacitorjs.com/docs/plugins/android
 
-export * from './definitions';
-export * from './web';
+import { registerPlugin } from "@capacitor/core";
+import { DSIEMVPlugin } from "./definitions";
 
-// import      { registerPlugin } from '@capacitor/core';
-// import type { dsiemvandroidPlugin } from './definitions';
+const DSIEMV = registerPlugin<DSIEMVPlugin>("DSIEMV", {
+  web: () => import("./web").then((m) => new m.DSEMVWeb()),
+});
 
-// const dsiEMVEchoPlugin = registerPlugin<dsiemvandroidPlugin>('dsiEMVEchoPlugin', {
-//   web: () => import('./web').then(m => new m.dsiemvandroidWeb()),
-//   //provided example         electron: () => ("./electron").then(m => new m.MyCoolPluginElectron())
-//   //test atempt didn't work  android: () => import('./definitions').then(m => new m.dsiemvandroidPlugin()),
+export * from "./definitions";
+export { DSIEMV };
+
+// example:
+// import { registerPlugin } from "@capacitor/core";
+// import { NativeMarketPlugin } from "./definitions";
+
+// const NativeMarket = registerPlugin<NativeMarketPlugin>("NativeMarket", {
+//   web: () => import("./web").then((m) => new m.NativeMarketWeb()),
 // });
 
-
-
-// export * from './definitions';
-// export { dsiEMVEchoPlugin };
-
-// export interface EchoPlugin {
-//   echo(options: { value: string }): Promise<{ value: string }>;
-// }
-
-// // -const Echo = registerPlugin('Echo');
-// const Echo = registerPlugin<EchoPlugin>('Echo');
-
-// export default Echo;
+// // export * from './web'; // @todo
+// export * from "./definitions";
+// export { NativeMarket };

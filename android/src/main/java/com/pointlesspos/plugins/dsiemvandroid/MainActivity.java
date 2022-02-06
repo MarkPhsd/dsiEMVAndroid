@@ -52,7 +52,7 @@ import static com.pointlesspos.plugins.dsiemvandroid.R.id.returnButton;
 import static com.pointlesspos.plugins.dsiemvandroid.R.id.saleButton;
 import static com.pointlesspos.plugins.dsiemvandroid.R.id.selectDevice;
 
-@CapacitorPlugin()
+@CapacitorPlugin(name = "MainActivity")
 // public class MainActivity extends AppCompatActivity   {
 public class MainActivity extends AppCompatActivity    {
 

@@ -4,8 +4,9 @@ export default {
   input: 'dist/esm/index.js',
   output: {
     file: 'dist/plugin.js',
-    format: 'iife',
+    format: 'esm',
     name: 'capacitorPlugin', // TODO: change this
+    inlineDynamicImports: true,
     globals: {
       '@capacitor/core': 'capacitorExports',
     },

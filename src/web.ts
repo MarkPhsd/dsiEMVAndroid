@@ -1,42 +1,34 @@
-import { WebPlugin } from '@capacitor/core';
-import { dsiemvandroidPlugin } from './definitions';
-import { registerWebPlugin } from '@capacitor/core';
+import { WebPlugin } from "@capacitor/core";
+import { DSIEMVPlugin } from './definitions';
 
-// import type {
-//   EchoPlugin, OpenMapOptions
-// } from './definitions';
-
-export class dsiemvandroidWeb extends WebPlugin implements dsiemvandroidPlugin {
+export class DSEMVWeb extends WebPlugin implements DSIEMVPlugin {
   constructor() {
     super({
-      name: 'dsiemvandroid',
+      name: 'DSIEMV',
       platforms: ['web'],
     });
   }
 
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    options.value = options.value +  " output is from web implementation"
-    return options;
+  async echo(call: { value: string }): Promise<{ value: string }> 
+  {
+    //  const option =  new Promise<options>();
+    //  return  option
+    call.value = call.value +  " - output is from web implementation"
+    return call  
+    //  throw this.unimplemented("I'm Not implemented on web.");
   }
+
+  getInstance(): Promise<{ value: string }>
+   {
+    throw this.unimplemented("DSI - getInstance - not implemented on web.");
+  }
+
+  foundation(): Promise<{ value: string }>
+   {
+    throw this.unimplemented("Foundation not implemented on web.");
+  }
+  //add each exported definition here with not implemented for web
 }
 
-const dsiemvandroid = new dsiemvandroidWeb();
-
-export { dsiemvandroid };
-
-registerWebPlugin(dsiemvandroid);
-
-////////////////////////
-// export class EchoWeb extends WebPlugin implements EchoPlugin {
-//   openMap(options: OpenMapOptions): Promise<void> {
-//     console.log(options)
-//     throw new Error('Method not implemented.');
-//   }
-//   // other methods
-//   async echo(options: { value: string }): Promise<{ value: string }> {
-//     options.value = options.value +  " output is from web implementation"
-//     return options;
-//   }
-//   // async openMap(location: OpenMapOptions): Promise<void> {
-//     // logic here
-// }
+const DSIEMV = new DSEMVWeb();
+export { DSIEMV };

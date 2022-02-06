@@ -8,9 +8,9 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.datacap.android.dsiEMVAndroid;
 
-@CapacitorPlugin()
-public class dsiEMVAndroidinstance {
-    private static volatile dsiEMVAndroid instance;
+@CapacitorPlugin(name = "DSIEMVAndroidInstance")
+public class DSIEMVAndroidInstance extends Plugin {
+    private static volatile DSIEMVAndroid instance;
 
     @PluginMethod()
     public static dsiEMVAndroid getInstance(Context context){
@@ -24,4 +24,14 @@ public class dsiEMVAndroidinstance {
         return instance;
     }
 
+    @PluginMethod()
+    public void echo(PluginCall call) {
+        String value = call.getString("value");
+        JSObject ret = new JSObject();
+        ret.put("Output from Android Implementation", value);
+        call.success(ret);
+    }
+
+
+ 
 }
